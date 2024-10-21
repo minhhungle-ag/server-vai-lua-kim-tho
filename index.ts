@@ -10,6 +10,7 @@ import { swaggerDocs } from "./swagger";
 import postRouter from "./api/Routes/post";
 import userRouter from "./api/Routes/user";
 import authRouter from "./api/Routes/auth";
+import categoryRouter from "./api/Routes/category";
 
 dotenv.config();
 
@@ -47,6 +48,7 @@ app.use(
 app.use("/api/posts", postRouter);
 app.use("/api/users", userRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/categories", categoryRouter);
 
 app.use(
   (req: express.Request, res: express.Response, next: express.NextFunction) => {
